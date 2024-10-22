@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwiaa2pnrktum"]
+
+[ext_resource type="Script" path="res://Scenes/rook.gd" id="1_2byv2"]
+[ext_resource type="Texture2D" uid="uid://gb2be6e6nlfx" path="res://Art/characters/slime.png" id="1_cf2qd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4q7a"]
+atlas = ExtResource("1_cf2qd")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fom8"]
+atlas = ExtResource("1_cf2qd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6xjlp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4q7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fom8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Rook" type="CharacterBody2D"]
+script = ExtResource("1_2byv2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6xjlp")
+
+[node name="detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="rook_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rook_hitbox"]
+
+[node name="take_damage_cooldown" type="Timer" parent="."]
+
+[connection signal="body_entered" from="rook_hitbox" to="." method="_on_rook_hitbox_body_entered"]
+[connection signal="body_exited" from="rook_hitbox" to="." method="_on_rook_hitbox_body_exited"]

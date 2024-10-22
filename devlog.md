@@ -17,3 +17,12 @@
 
   You can learn more about formatting using markdown.
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+### 2024-10-06 - ---:Starting my game
+* Item 1 - Found a tutorial series by John Ivess on youtube to base my combat off of.
+* Item 2 - Realized that the tutorial is from a previous version of Godot and with my lack of knowledge of coding I would be unable to apply it to the newer version
+* Item 3 - Deleted all the things I downloaded to follow the tutorial and found a new tutorial by DevWorm for a newer version of Godot
+
+### 2024/10/16 :I'm really bad at updating my devlog
+*I've almost completed the tutorial I'm following to learn about coding 2D battle mechanics as well as player interactions with enemies and the environment
+* I'm considering asking in the discord for a different way to think about the coding process. I'm so used to just having a big hunk of code that runs once or runs forever, but this is just all constantly running and I'm confused at were the code starts, what gets triggered first? what is the order of everything?
